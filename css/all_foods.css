@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --orange: #ff9000;
+    --green: #0b8116;
+    --light-bg: #eaebea;
+    --yellow: #ffea04;
+    --light-orange: #ffa800;
+    --black: #000;
+    --grey: #a1a1a1;
+}
+
+ * {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .3s ease;
+ }
+
+ html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+ }
+
+ body {
+    width: 100%;
+ }
+
+ ::-webkit-scrollbar {
+    width: 1rem;
+ }
+
+ ::-webkit-scrollbar-track {
+    background: transparent;
+ }
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--light-orange);
+ }
+
+ /* header section starts here  */
+
+ .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    background-color: var(--light-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    top: 0; left: 0;
+    position: sticky;
+ }
+
+ .header .logo img {
+    width: 15%;
+    align-items: flex-start;
+    margin-left: -60px;
+ }
+
+ .header .navbar {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .header .navbar h2 {
+    font-size: 3rem;
+    margin-left: 25rem;
+    color: var(--light-orange);
+ }
+
+ .navbar .btns {
+    /* position: absolute; */
+     position: absolute;
+     display: flex;
+     right: -80%;
+  }
+ 
+  .navbar .btns i {
+     font-size: 25px;
+     color: var(--black);
+     padding: 1.5rem;
+     cursor: pointer;
+  }
+ 
+  .btns i:hover {
+     color: var(--green);
+  }
+
+ /* header section ends here  */
+
+ @keyframes fadeIn {
+    0% {
+       top: 50%;
+       padding: 1rem 3rem;
+    }
+  }
+
+ /* search form section starts here  */
+ .search-form {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+ }
+
+ .search-form.active {
+    display: block;
+  }
+
+ .search-form .flex {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+ .search-form #search {
+    width: 60%;
+    background-color: var(--light-bg);
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    font-size: 19px;
+    
+ }
+
+ .search-form a i {
+    font-size: 25px;
+    color: var(--black);
+    margin-left: -40px;
+ }
+
+
+ /* search form section ends here  */
+
+ /* fast foods section starts here  */
+
+ .fast_foods {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+ }
+
+
+ .fast_foods .image_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 80%;
+    justify-content: center;
+    margin-top: 10px;
+ }
+
+ .fast_foods .image_section p {
+    font-size: 22px;
+    max-width: 88%;
+    justify-content: center;
+}
+
+ .fast_foods .image_section img {
+    width: 30%;
+    margin-top: 12px;
+    height: 70%;
+    object-fit: cover;
+    padding: 3rem 4rem;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    cursor: pointer;
+ }
+
+ .image_section img:hover {
+    border-radius: 10%;
+    padding: 2rem;
+ }
+ /* fast foods section ends here  */

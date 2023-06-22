@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s ease;
+ }
+
+ html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+ }
+
+ body {
+    width: 100%;
+    background-image: url('/img/blurred\ pepperoni\ pizza.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+ }
+
+ @keyframes fadeIn {
+   0% {
+      top: 50%;
+      padding: 1rem 3rem;
+   }
+ }
+ .login-form {
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 40rem;
+   background: transparent;
+   border: 1px solid rgb(255, 255, 255);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+   padding: 2rem;
+   text-align: center;
+   animation: fadeIn .2s linear;
+ }
+
+ .login-form h3 {
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   padding-bottom: 1rem;
+   color: #fff;
+ }
+
+ .login-form input {
+   font-size: 1.7rem;
+ }
+ .login-form .box {
+   width: 100%;
+   padding: 1.2rem 1.4rem;
+   background: #f4f4f4;
+   margin: .7rem 0;
+ }
+ .login-form .flex {
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+   padding-top: 1.5rem;
+   padding-bottom: 1rem;
+ }
+
+ .login-form label {
+   font-size: 1.8rem;
+   color: #fff;
+   cursor: pointer;
+ }
+
+ .login-form a {
+   color: #fff;
+   font-size: 1.8rem;
+   margin-left: auto;
+ }
+
+ .login-form a:hover {
+   color: orange;
+   text-decoration: underline;
+ }
+
+ .login-form .btn {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: 1rem 3rem;
+   color: #fff;
+   background-color: #000;
+   cursor: pointer;
+   font-size: 2rem;
+   text-transform: capitalize;
+   width: 100%;
+ }
+
+ .login-form .btn:hover {
+   background: orange;
+   color: #000;
+ } 
+
+ .login-form p {
+   font-size: 1.8rem;
+   padding-top: 1.5rem;
+   color: #fff;
+ }
+
+ .login-form p a{
+   color: orange;
+ }
+
+ .login-form p a:hover {
+   text-decoration: underline;
+ }
