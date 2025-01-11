@@ -3,7 +3,7 @@
 :root {
     --orange: #ff9000;
     --green: #0b8116;
-    --light-bg: #eaebea;
+    --light-bg: #ffffff;
     --yellow: #ffea04;
     --light-orange: #ffa800;
     --black: #000;
@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 80px;
+    padding: 30px 80px;
     background-color: var(--light-bg);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 1000;
@@ -63,33 +63,48 @@
 
  .header .navbar {
     display: flex;
-    position: relative;
     flex-direction: row;
+    position: relative;
     align-items: center;
     justify-content: center;
  }
 
- .navbar li {
-    list-style: none;
-    padding: 0 20px;
-    display: inline;
- }
 
- .navbar li a {
-    text-decoration: none;
-    font-size: 20px;
-    color: var(--black);
- }
+/* newly added */
+.navbar ul li {
+   display: inline-block;
+   list-style: none;
+   margin: 10px 10px;
+   font-weight: 900;
+}
 
- .navbar li a:hover,
- .navbar li a:active {
-    color: var(--green);
-    text-decoration: underline;
- }
+.navbar ul li a {
+   color: var(--black);
+   font-size: 20px;
+   text-transform: uppercase;
+   cursor: pointer;
+   position: relative;
+}
+
+.navbar ul li a::after {
+   content: '';
+   width: 0;
+   height: 3px;
+   background: var(--orange);
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   transition: .3s linear;
+}
+
+.navbar ul li a:hover::after {
+   width: 100%;
+}
+
+/* ends here */
 
 .navbar .btns {
-   position: absolute;
-   right: -60%;
+   margin-left: 140px;
  }
 
  .navbar .btns i {
@@ -107,6 +122,7 @@
     color: var(--green);
  }
 
+ 
  .navbar .btns #sign_in_btn {
     font-size: 20px;
     border-radius: 5px;
@@ -313,7 +329,8 @@
     align-items: center;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: #000000e7;
+    /* background-color: #824500e7; */
     height: 80vh;
     width: 100%;
     position: relative;
@@ -326,18 +343,26 @@
    position: absolute;
    left: 8%;
  }
- .hero h2 {
-    font-size: 12rem;
+ .hero .hero_banner {
+   position: relative;
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: .8px;
+    line-height: 85px;
     margin-bottom: 40px;
+    color: var(--light-bg);
  }
 
- .hero .heroic span {
+ .hero .heroic #dessert {
    color: var(--light-orange);
  }
+
  .hero p {
    font-size: 3rem;
+   font-weight: bold;
    margin-bottom: 40px;
    text-transform: none;
+   color: #fff;
  }
 
  .hero img {
@@ -347,18 +372,37 @@
    top: -2%;
  }
 
- .hero #order_now {
+ .hero #order_btn {
+   position: relative;
    font-size: 2rem;
    padding: 1.6rem 2.6rem;
-   background-color: var(--light-orange);
+   background-color: transparent;
    color: var(--light-bg);
    border-radius: 5px;
+   border: solid var(--light-orange);
    cursor: pointer;
+   overflow: hidden;
+   z-index: 1;
+   transition: background .5s;
  }
 
- .hero #order_now:hover {
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
- }
+#order_btn::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   z-index: -1;
+   background-color: var(--orange);
+   transition: width .5s;
+}
+
+#order_btn:hover::before {
+   width: 100%;
+}
+
+
 /* hero section ends here  */
 
 /* customer review section starts here  */
